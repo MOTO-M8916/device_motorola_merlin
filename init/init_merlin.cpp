@@ -84,9 +84,9 @@ void vendor_load_properties()
     sprintf(description, "merlin_%s-user 6.0.1 MPD24.107-56 30 release-keys", customerid);
     sprintf(fingerprint, "motorola/merlin_%s/merlin:6.0.1/MPD24.107-56/30:user/release-keys", customerid);
 
-    property_override("ro.product.device", device);
-    property_override("ro.build.product", device);
-    property_override("ro.build.description", description);
-    property_override("ro.build.fingerprint", fingerprint);
+    property_override_dual("ro.product.device","ro.vendor.product.device", device);
+    property_override_dual("ro.build.product","ro.vendor.build.product", device);
+    property_override_dual("ro.build.description","ro.vendor.build.description", description);
+    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", fingerprint);
     property_set("ro.mot.build.customerid", customerid);
 }
