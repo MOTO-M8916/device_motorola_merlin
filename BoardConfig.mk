@@ -51,3 +51,6 @@ endif
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+
+# Sensors
+BOARD_USES_MOT_SENSOR_HUB := true
