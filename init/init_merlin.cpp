@@ -67,21 +67,19 @@ void vendor_load_properties()
     std::string sku = GetProperty("ro.boot.hardware.sku","");
 
     if (sku == "XT1556" || radio == "0x6") {
-		property_set("ro.mot.build.customerid", "retail");
-		property_override_dual("ro.product.model","ro.vendor.product.model", "XT1556");
-		property_override_dual("ro.product.device","ro.vendor.product.device", "merlin");
+	property_set("ro.mot.build.customerid", "retail");
+	property_override_dual("ro.product.device","ro.vendor.product.device", "merlin");
         property_override_dual("ro.build.product","ro.vendor.build.product", "merlin");
-		property_override_dual("ro.build.description","ro.vendor.build.description", "merlin_retail-user 6.0.1 MPD24.107-56 30 release-keys");
+	property_override_dual("ro.build.description","ro.vendor.build.description", "merlin_retail-user 6.0.1 MPD24.107-56 30 release-keys");
         property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "motorola/merlin_retail/merlin:6.0.1/MPD24.107-56/30:user/release-keys");
         property_set("ro.gsm.data_retry_config", "default_randomization=2000,max_retries=infinite,1000,1000,80000,125000,485000,905000");
         property_set("persist.radio.process_sups_ind", "1");
     }
     else if (sku == "XT1557" || radio == "0x9") {
-		property_set("ro.mot.build.customerid", "retasia");
-	    property_override_dual("ro.product.model","ro.vendor.product.model", "XT1557");
-		property_override_dual("ro.product.device","ro.vendor.product.device", "merlin");
+	property_set("ro.mot.build.customerid", "retasia");
+	property_override_dual("ro.product.device","ro.vendor.product.device", "merlin");
         property_override_dual("ro.build.product","ro.vendor.build.product", "merlin");
-		property_override_dual("ro.build.description","ro.vendor.build.description", "merlin_retasia-user 6.0.1 MPD24.107-56 30 release-keys");
+	property_override_dual("ro.build.description","ro.vendor.build.description", "merlin_retasia-user 6.0.1 MPD24.107-56 30 release-keys");
         property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "motorola/merlin_retasia/merlin:6.0.1/MPD24.107-56/30:user/release-keys");
     }
 }
