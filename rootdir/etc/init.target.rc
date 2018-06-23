@@ -25,6 +25,9 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+on early-init
+    start osprey-config-sh
+
 on boot
 
     # Switch to interactive and let PowerHAL configure it
@@ -44,6 +47,12 @@ on boot
 
     chown system system /sys/module/cpu_boost/parameters/input_boost_freq
     chmod 0644 /sys/module/cpu_boost/parameters/input_boost_freq
+
+service osprey-config-sh /vendor/bin/init.osprey.config.sh
+    class core
+    user root
+    oneshot
+    disabled
 
 on property:sys.boot_completed=1
     setprop sys.io.scheduler fiops

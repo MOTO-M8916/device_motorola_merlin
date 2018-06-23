@@ -43,6 +43,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+    init.merlin.config.sh \
     init.target.rc
 
 
