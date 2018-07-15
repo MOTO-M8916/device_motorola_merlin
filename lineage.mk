@@ -33,4 +33,4 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=motorola/merlin_retail/merlin:6.0.1/MPD24.107-56/30:user/release-keys \
-    PRIVATE_BUILD_DESC="merlin_retail-user 6.0.1 MPD24.107-56 30 release-keys" \
+    PRIVATE_BUILD_DESC="merlin_retail-user 6.0.1 MPD24.107-56 30 release-keys"
