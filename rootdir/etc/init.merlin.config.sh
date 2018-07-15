@@ -7,10 +7,7 @@
 PATH=/sbin:/vendor/sbin:/vendor/bin:/vendor/xbin
 export PATH
 
-carrier=`getprop ro.boot.carrier`
-radio=`getprop ro.boot.radio`
 sku=`getprop ro.boot.hardware.sku`
-ram=`cat /sys/ram/size`
 
 set_config_props ()
 {
