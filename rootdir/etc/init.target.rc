@@ -26,7 +26,7 @@
 #
 
 on early-init
-    start osprey-config-sh
+    start merlin-config-sh
 
 on boot
 
@@ -48,7 +48,7 @@ on boot
     chown system system /sys/module/cpu_boost/parameters/input_boost_freq
     chmod 0644 /sys/module/cpu_boost/parameters/input_boost_freq
 
-service osprey-config-sh /vendor/bin/init.osprey.config.sh
+service merlin-config-sh /vendor/bin/init.merlin.config.sh
     class core
     user root
     oneshot
