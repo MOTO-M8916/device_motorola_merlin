@@ -14,5 +14,5 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_merlin.mk
+    $(LOCAL_DIR)/mokee_merlin.mk
 
